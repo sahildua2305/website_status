@@ -37,5 +37,5 @@ def website_down(url=""):
 		if response.status_code==200:
 			return False
 		return True
-	except requests.exceptions.Timeout, requests.exceptions.ConnectionError:
+	except requests.exceptions.Timeout, requests.exceptions.ConnectionError, requests.exceptions.MissingSchema:
 		return True
